@@ -1,0 +1,138 @@
+theme = "beans" # Popular dark theme, or use "default" for light
+
+[editor]
+line-number = "relative"
+middle-click-paste = true
+mouse = true
+cursorline = true
+cursorcolumn = false
+auto-completion = true
+auto-format = true
+auto-save = false
+idle-timeout = 400
+completion-timeout = 250
+preview-completion-insert = true
+completion-trigger-len = 2
+auto-info = true
+true-color = true
+undercurl = true
+rulers = [80, 120]
+bufferline = "multiple"
+color-modes = true
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
+  "version-control",
+]
+center = ["file-absolute-path"]
+right = [
+  "diagnostics",
+  "workspace-diagnostics",
+  "selections",
+  "register",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+  "position-percentage",
+  "total-line-numbers",
+  "position",
+]
+separator = ""
+
+# Enhanced mode indicators with visual distinction
+mode.normal = "󰰓 NORMAL"
+mode.insert = "󰰄 INSERT"
+mode.select = "󰰫 SELECT"
+
+[editor.lsp]
+enable = true
+display-messages = true
+auto-signature-help = true
+display-inlay-hints = true
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+follow-symlinks = true
+deduplicate-links = true
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
+max-depth = 25
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.whitespace]
+render = "all"
+characters.space = "·"
+characters.nbsp = "⍽"
+characters.tab = "→"
+
+[editor.indent-guides]
+render = true
+character = "│"
+skip-levels = 1
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.soft-wrap]
+enable = false
+max-wrap = 25
+max-indent-retain = 0
+wrap-indicator = ""
+
+# Key bindings
+[keys.normal]
+# Quick save
+C-s = ":write"
+# Quick quit
+C-q = ":quit"
+# Better search
+"/" = "search"
+"?" = "rsearch"
+# Window management
+C-w.v = ":vsplit"
+C-w.s = ":hsplit"
+C-w.c = ":quit"
+# Buffer navigation
+"H" = ":buffer-previous"
+"L" = ":buffer-next"
+# LSP shortcuts
+"g" = { d = "goto_definition", r = "goto_reference", i = "goto_implementation" }
+# Comment toggle
+"C-/" = "toggle_comments"
+
+[keys.insert]
+# Exit insert mode
+j.k = "normal_mode"
+# Quick save in insert mode
+C-s = ["normal_mode", ":write"]
+
+[keys.select]
+# Comment in select mode
+"C-/" = "toggle_comments"

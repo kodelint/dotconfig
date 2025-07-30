@@ -1,0 +1,32 @@
+settings:
+  macos: # Settings specifically for macOS
+    - domain: NSGlobalDomain           # A common domain for global macOS settings
+      key: AppleShowAllExtensions      # The specific setting key: show file extensions
+      value: "true"                    # Set its value to true
+      type: bool                       # This setting expects a boolean value
+    - domain: com.apple.finder         # Settings specific to the macOS Finder application
+      key: AppleShowAllFiles           # The specific setting key: show hidden files
+      value: "true"                    # Set its value to true
+      type: bool                       # This setting also expects a boolean value
+
+    # Show hidden files in Finder
+    - domain: com.apple.finder
+      key: AppleShowAllFiles
+      value: "true"
+      type: bool
+
+    # Increase key repeat rate (lower is faster)
+    - domain: NSGlobalDomain
+      key: KeyRepeat
+      value: "1"
+      type: int
+    - domain: NSGlobalDomain
+      key: InitialKeyRepeat
+      value: "10"
+      type: int
+
+    # Enable full keyboard access
+    - domain: NSGlobalDomain
+      key: AppleKeyboardUIMode
+      value: "3"
+      type: int

@@ -1,0 +1,432 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+//
+// {
+//   "icon_theme": "Catppuccin Latte",
+//   "bottom_dock_layout": "left_aligned",
+//   "buffer_font_family": "0xProto Nerd Font",
+//   "buffer_font_size": 14.5,
+//   "buffer_font_features": {
+//     "calt": true
+//   },
+//   "git": {
+//     "git_gutter": "tracked_files",
+//     "gutter_debounce": null,
+//     "inline_blame": {
+//       "enabled": true, // Show/hide inline blame
+//       "min_column": 0, // Minimum column to inline display blame
+//       "show_commit_summary": true // Show/hide commit summary
+//     },
+//     "hunk_style": "staged_hollow"
+//   },
+//   "gutter": {
+//     "line_numbers": true, // Show/hide line numbers in the gutter.
+//     "runnables": true, // Show/hide runnables buttons in the gutter.
+//     "breakpoints": true, // Show/hide show breakpoints in the gutter.
+//     "folds": true, // Show/hide show fold buttons in the gutter.
+//     "min_line_number_digits": 4 // Reserve space for N digit line numbers
+//   },
+//   "relative_line_numbers": false, // Show relative line numbers in gutter
+//   "show_completions_on_input": true,
+//   "terminal": {
+//     "font_family": "0xProto Nerd Font",
+//     "font_size": 15,
+//     "line_height": "standard"
+//   },
+//   "title_bar": {
+//     "show_branch_icon": true, // Show/hide branch icon beside branch switcher
+//     "show_branch_name": true, // Show/hide branch name
+//     "show_project_items": true, // Show/hide project host and name
+//     "show_onboarding_banner": true, // Show/hide onboarding banners
+//     "show_user_picture": true, // Show/hide user avatar
+//     "show_sign_in": true // Show/hide sign-in button
+//   },
+//   "theme": {
+//     "mode": "system",
+//     "light": "One Light",
+//     "dark": "Zedokai (Filter Spectrum)"
+//   },
+//   "ui_font_size": 16.5,
+//   "ui_font_family": "0xProto Nerd Font",
+//   "ui_font_features": {
+//     "calt": true
+//   }
+// }
+
+{
+  // Base theme and appearance (your existing settings)
+  "icon_theme": "Catppuccin Frappé",
+  "bottom_dock_layout": "left_aligned",
+  "buffer_font_family": "0xProto Nerd Font Propo",
+  "buffer_font_size": 14.5,
+  "buffer_font_features": {
+    "calt": true
+  },
+  "ui_font_size": 16.5,
+  "ui_font_family": "0xProto Nerd Font",
+  "ui_font_features": {
+    "calt": true
+  },
+
+  // Theme configuration (your existing settings)
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Mirage"
+  },
+
+  // Git configuration (your existing settings)
+  "git": {
+    "git_gutter": "tracked_files",
+    "gutter_debounce": null,
+    "inline_blame": {
+      "enabled": true,
+      "min_column": 0,
+      "show_commit_summary": true
+    },
+    "hunk_style": "staged_hollow"
+  },
+
+  // Gutter configuration (your existing settings)
+  "gutter": {
+    "line_numbers": true,
+    "runnables": true,
+    "breakpoints": true,
+    "folds": true,
+    "min_line_number_digits": 4
+  },
+  "relative_line_numbers": false,
+
+  // Terminal configuration (your existing settings)
+  "terminal": {
+    "font_family": "0xProto Nerd Font",
+    "font_size": 15,
+    "line_height": "standard"
+  },
+
+  // Title bar configuration (your existing settings)
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_branch_name": true,
+    "show_project_items": true,
+    "show_onboarding_banner": true,
+    "show_user_picture": true,
+    "show_sign_in": true
+  },
+
+  // Editor enhancements
+  "show_completions_on_input": true,
+  "vim_mode": false, // Set to true if you prefer Vim keybindings
+  "base_keymap": "VSCode", // Options: "VSCode", "JetBrains", "Sublime", "Atom"
+
+  // Performance and behavior settings
+  "cursor_blink": true,
+  "hover_popover_enabled": true,
+  "show_completion_documentation": true,
+  "use_auto_surround": true,
+  "double_click_in_multibuffer": "select",
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "redact_private_values": false,
+  "seed_search_query_from_cursor": "selection",
+  "when_closing_with_no_tabs": "platform_default",
+
+  // Editor display settings
+  "confirm_quit": false,
+  "restore_on_startup": "last_workspace",
+  "tab_size": 2,
+  "hard_tabs": false,
+  "soft_wrap": "editor_width",
+  "preferred_line_length": 100,
+  "show_whitespaces": "selection",
+  "wrap_guides": [80, 100],
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 2,
+    "coloring": "indent_aware"
+  },
+
+  // Scrolling and navigation
+  "scroll_sensitivity": 3.0,
+  "scrollbar": {
+    "show": "auto",
+    "diagnostics": "none",
+    "git_diff": true,
+    "search_results": true
+  },
+  "vertical_scroll_margin": 3,
+  "horizontal_scroll_margin": 3,
+
+  // Search configuration
+  "search": {
+    "whole_word": false,
+    "case_sensitive": false,
+    "include_ignored": false,
+    "regex": false,
+    "button": true
+  },
+
+  // Project panel settings
+  "project_panel": {
+    "button": true,
+    "default_width": 240,
+    "dock": "left",
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "indent_size": 20,
+    "auto_reveal_entries": true,
+    "auto_fold_dirs": true
+  },
+
+  // Outline panel
+  "outline_panel": {
+    "button": true,
+    "default_width": 300,
+    "dock": "right",
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "indent_size": 20
+  },
+
+  // Collaboration features
+  "collaboration_panel": {
+    "button": true,
+    "dock": "left",
+    "default_width": 240
+  },
+
+  // Chat and AI panel
+  "chat_panel": {
+    "button": "when_in_call",
+    "dock": "right",
+    "default_width": 240
+  },
+
+  // Notification settings
+  "notification_panel": {
+    "button": true,
+    "dock": "bottom",
+    "default_width": 380
+  },
+
+  // Tab configuration
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true
+  },
+
+  // Tab bar settings
+  "tab_bar": {
+    "show_nav_history_buttons": true
+  },
+
+  // Toolbar configuration
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true,
+    "selections_menu": true
+  },
+
+  // Inlay hints
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50
+  },
+
+  // Auto-install useful extensions
+  "auto_install_extensions": {
+    "html": true,
+    "emmet": true,
+    "unocss": true,
+    "vue": true,
+    "svelte": true,
+    "toml": true,
+    "dockerfile": true,
+    "xml": true,
+    "sql": true,
+    "log": true,
+    "csv": true,
+    "git-firefly": true,
+    "catppuccin": true
+  },
+
+  // Language-specific settings
+  "languages": {
+    "TypeScript": {
+      "tab_size": 2,
+      "hard_tabs": false,
+      "formatter": "language_server",
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    },
+    "JavaScript": {
+      "tab_size": 2,
+      "hard_tabs": false,
+      "formatter": "language_server",
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    },
+    "TSX": {
+      "tab_size": 2,
+      "hard_tabs": false,
+      "formatter": "language_server",
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    },
+    "JSON": {
+      "tab_size": 2,
+      "formatter": "language_server",
+      "format_on_save": "on"
+    },
+    "Python": {
+      "tab_size": 4,
+      "formatter": {
+        "external": {
+          "command": "ruff",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      },
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.ruff": true
+      }
+    },
+    "Rust": {
+      "tab_size": 4,
+      "formatter": "language_server",
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "Go": {
+      "tab_size": 4,
+      "hard_tabs": true,
+      "formatter": "language_server",
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "CSS": {
+      "tab_size": 2,
+      "formatter": "language_server",
+      "format_on_save": "on"
+    },
+    "HTML": {
+      "tab_size": 2,
+      "formatter": "language_server",
+      "format_on_save": "on"
+    },
+    "Markdown": {
+      "tab_size": 2,
+      "format_on_save": "on",
+      "preferred_line_length": 80,
+      "soft_wrap": "preferred_line_length"
+    },
+    "YAML": {
+      "tab_size": 2,
+      "formatter": "language_server",
+      "format_on_save": "on"
+    }
+  },
+
+  // LSP settings
+  "lsp": {
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "includeInlayParameterNameHints": "all",
+          "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+          "includeInlayFunctionParameterTypeHints": true,
+          "includeInlayVariableTypeHints": true,
+          "includeInlayPropertyDeclarationTypeHints": true,
+          "includeInlayFunctionLikeReturnTypeHints": true,
+          "includeInlayEnumMemberValueHints": true
+        }
+      }
+    },
+    "eslint": {
+      "settings": {
+        "codeActionOnSave": {
+          "rules": ["import/order"]
+        }
+      }
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy"
+        },
+        "inlayHints": {
+          "bindingModeHints": {
+            "enable": false
+          },
+          "chainingHints": {
+            "enable": true
+          },
+          "closingBraceHints": {
+            "enable": true,
+            "minLines": 25
+          },
+          "closureReturnTypeHints": {
+            "enable": "never"
+          },
+          "lifetimeElisionHints": {
+            "enable": "never",
+            "useParameterNames": false
+          },
+          "maxLength": 25,
+          "parameterHints": {
+            "enable": true
+          },
+          "reborrowHints": {
+            "enable": "never"
+          },
+          "renderColons": true,
+          "typeHints": {
+            "enable": true,
+            "hideClosureInitialization": false,
+            "hideNamedConstructor": false
+          }
+        }
+      }
+    }
+  },
+
+  // File associations
+  "file_types": {
+    "Dockerfile": ["Dockerfile", "Dockerfile.*", "*.dockerfile"],
+    "JSON": ["*.json", "*.jsonc", ".eslintrc", ".prettierrc"],
+    ".env": [".env*"]
+  },
+
+  // Telemetry settings
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  }
+}

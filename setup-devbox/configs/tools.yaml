@@ -1,0 +1,195 @@
+tools:
+  ############################################################
+  # Generate command assume that the base system is vanilla  #
+  # Based on that assumption it, generate the bare minimun   #
+  # Which can be extended as you please                      #
+  ############################################################
+
+  # Install Brew: Brew Installer (using github)
+  #  - name: brew
+  #    version: 4.5.10
+  #    source: github
+  #    # This is look at the GitHub repository `Homebrew/brew` Release page
+  #    # And it will download the `Homebrew-4.5.10.pkg`
+  #    repo: Homebrew/brew
+  #    tag: 4.5.10
+
+  # Core Development Tools (Common for most setups)
+  # Usually it is not available in the GitHub
+  # Uncomment and configure the tools you need.
+  #  - name: git
+  #    source: brew # Install git using Homebrew
+  #    version: latest # Or a specific version, e.g., "2.45.2"
+
+  # #########################
+  # Example: BREW Installer #
+  # #########################
+  # Rust Toolchain Installer
+  # This will install rustup
+  - name: rustup
+    source: brew # Install rustup via Homebrew
+
+  # Example: Install pyenv
+  # Uncomment if you develop in in python and want `pyenv`.
+  - name: pyenv
+    source: brew
+    options:
+      - --head
+
+  # Example: Install pyenv-virtualenv
+  # Uncomment if you develop in in python and want `pyenv-virtualenv`.
+  - name: pyenv-virtualenv
+    source: brew
+    options:
+      - --head
+
+  # #########################
+  # Example: RUST Installer #
+  # #########################
+  # Install rust and other rust tools
+  - name: rust
+    # Specifies that 'rustup' should be used for installation
+    source: rustup
+    #Targets your existing 'stable' toolchain. rustup will update it if needed.
+    version: stable
+    #List of components to install with the 'stable' toolchain
+    options:
+      ##  Source code for the Rust standard library, useful for IDEs
+      - rust-src
+      ##  A linter to catch common mistakes and improve your Rust code
+      - clippy
+      ##  A formatter for Rust code, ensuring consistent style
+      - rustfmt
+      ##  The language server for Rust, providing IDE features
+      - rust-analyzer
+
+  # ###############################
+  # Example: DIRECT URL Installer #
+  # ###############################
+  # Example: Go Installer (via direct URL)
+  - name: go
+    source: url
+    version: 1.24.5
+    url: https://go.dev/dl/go1.24.5.darwin-amd64.pkg
+
+  # Install Docker Desktop
+  - name: Docker
+    source: url
+    version: 4.43.2
+    url: https://desktop.docker.com/mac/main/arm64/Docker.dmg
+
+  # Install Ghostty Terminal
+  - name: Ghostty
+    source: url
+    version: 1.1.3
+    url: https://release.files.ghostty.org/1.1.3/Ghostty.dmg
+
+  # #######################
+  # Example: GO Installer #
+  # #######################
+  # - name: delve
+  #   source: go
+  #   version: latest
+  #   url: github.com/go-delve/delve/cmd/dlv
+
+  # ###########################
+  # Example: GITHUB Installer #
+  # ###########################
+  # Install GitHub CLI (gh)
+  - name: cli
+    version: "2.74.0"
+    source: github
+    repo: cli/cli
+    tag: v2.74.0
+    rename_to: gh
+
+  # Install morden tre aka tree command
+  - name: tre
+    version: 0.4.0
+    source: github
+    repo: dduan/tre
+    tag: v0.4.0
+    rename_to: tree
+
+  # Install git-spellcheck
+  - name: git-spellcheck
+    version: 0.0.1
+    source: github
+    repo: kodelint/git-spellcheck
+    tag: v0.0.1
+    rename_to: git-spellcheck
+
+  # Install native plugin for git pull request
+  - name: git-pr
+    version: 0.1.0
+    source: github
+    repo: kodelint/git-pr
+    tag: v0.1.0
+    rename_to: git-pr
+
+  # Install macOS Cleaner
+  - name: osx
+    version: 0.1.0
+    source: github
+    repo: kodelint/osx-cleaner
+    tag: v0.1.0
+    rename_to: osx
+
+  # Install fuzzy finder
+  - name: fzf
+    version: 0.64.0
+    source: github
+    repo: junegunn/fzf
+    tag: v0.64.0
+    rename_to: fzf
+
+  # Install morden `cat` tool called `bat`
+  - name: bat
+    version: 0.25.0
+    source: github
+    repo: sharkdp/bat
+    tag: v0.25.0
+    rename_to: bat
+
+  # Install delta as Git Diff Tool
+  - name: delta
+    version: 0.18.2
+    source: github
+    repo: dandavison/delta
+    tag: 0.18.2
+    rename_to: delta
+
+  # Install Zed Editor
+  - name: zed
+    version: 0.195.5
+    source: github
+    repo: zed-industries/zed
+    tag: v0.195.5
+    rename_to: zed
+
+  # Install Helix Editor for Comamnd Line
+  - name: helix
+    version: 25.07.1
+    source: github
+    repo: helix-editor/helix
+    tag: 25.07.1
+    rename_to: hx
+    additional_cmd:
+      - mkdir -p $HOME/.config/helix
+      - cp -r runtime $HOME/.config/helix
+      - cp -r contrib $HOME/.config/helix
+
+  # Install Starship prompt for terminal
+  - name: starship
+    version: 1.23.0
+    source: github
+    repo: starship/starship
+    tag: v1.23.0
+
+  # Install jq for terminal
+  - name: jq
+    version: 1.8.1
+    source: github
+    repo: jqlang/jq
+    tag: jq-1.8.1
+    rename_to: jq

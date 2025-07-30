@@ -1,0 +1,8 @@
+jgit
+jgit/config
+helix/contrib
+helix/runtime
+helix/runtime/*
+helix/contrib/*
+zed/prompts/prompts-library-db.0.mdb
+zed/prompts

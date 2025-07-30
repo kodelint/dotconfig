@@ -1,0 +1,57 @@
+shellrc:
+  shell: zsh # The type of shell being configured (e.g., zsh, bash, fish)
+  raw_configs: # A list of lines that will be directly added to the shell's config file (e.g., ~/.zshrc)
+    - export PATH=$HOME/bin:$PATH # Add a custom 'bin' directory to the system PATH
+    - export PATH=$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/bin:$PATH
+    - export PATH=$HOME/.cargo/bin:$PATH # Add Rust's cargo binaries to the PATH
+    - export RUSTUP_HOME=$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/bin
+    - export GOPATH="$(go env GOPATH)" # Set GOPATH
+    - export PATH="$(go env GOPATH)/bin:$PATH"
+    # Uncomment the following if you install Go manually (e.g., via direct URL installer)
+    # - export PATH=/usr/local/go/bin:$PATH # Add Go binaries to the PATH
+    - export PYENV_ROOT="$HOME/.pyenv" # Export pyenv root
+    - export PATH="$PYENV_ROOT/bin:$PATH" # map it to the $PATH
+    - eval "$(pyenv init - zsh)" # Initialize pyenv
+    - eval "$(pyenv virtualenv-init -)" # enable pyenv-virtualenv in environment
+    - eval "$(starship init zsh)" # Initialize Starship prompt for a fancy shell prompt
+    # Set up fzf key bindings and fuzzy completion
+    - source <(fzf --zsh)
+    - zle -N fzf-history-widget
+    - bindkey '^R' fzf-history-widget
+    - 'export FZF_CTRL_R_OPTS="--no-preview --scheme=history --tiebreak=index --bind=ctrl-r:toggle-sort"'
+aliases: # Custom command aliases for user convenience
+  - name: cat # Replace `cat with `bat`
+    value: bat --paging=never # The command it expands to: change directory to a common dev folder
+  - name: gocode # Another alias for Go Development
+    value: cd $HOME/Documents/github/kodelint/go-development/ # Change directory to the Go source workspace
+  - name: rscode # Another alias for Rust Development
+    value: cd $HOME/Documents/github/kodelint/rust-development
+  - name: config
+    value: zed $HOME/.config
+  ## Git Aliases
+  - name: g
+    value: git
+  - name: gs
+    value: g status
+  - name: ga
+    value: g add
+  - name: gaa
+    value: g add --all
+  - name: gc
+    value: g commit
+  - name: gcm
+    value: g commit -m
+  - name: gco
+    value: g checkout
+  - name: gpl
+    value: g pull
+  - name: gps
+    value: git push
+  - name: gl
+    value: g log --oneline --graph --decorate --all
+  - name: glog
+    value: r log --pretty=format:"%C(auto)%h%d %s %C(blue)(%cr) %C(green)<%an>" --graph --all
+  - name: gld
+    value: g log --pretty=format:"%C(yellow)%h%Creset %ad %Cgreen[%an]%Creset %C(auto)%d%Creset %s" --date=short --graph
+  - name: ginfo
+    value: g log --pretty=format:"%C(yellow)%h%Creset | %s | %C(green)%an%Creset | %C(cyan)%cr%Creset" --abbrev-commit

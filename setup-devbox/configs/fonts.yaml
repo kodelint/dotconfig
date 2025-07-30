@@ -1,0 +1,13 @@
+fonts:
+  - name: 0xProto                    # The name of the font
+    version: "3.4.0"                 # A specific version of the font
+    source: github                   # Where to get it: GitHub releases
+    repo: ryanoasis/nerd-fonts       # The GitHub repo for Nerd Fonts
+    tag: v3.4.0                      # The specific release tag for this font version
+    install_only: ['regular', 'Mono']
+  - name: Hack                       # The name of the font
+    version: "3.4.0"                 # A specific version of the font
+    source: github                   # Where to get it: GitHub releases
+    repo: ryanoasis/nerd-fonts       # The GitHub repo for Nerd Fonts
+    tag: v3.4.0                      # The specific release tag for this font version
+    install_only: ['regular', 'Mono']
