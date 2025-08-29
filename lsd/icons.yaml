@@ -1,0 +1,31 @@
+name:
+  .trash: 
+  .cargo: 
+  .emacs.d: 
+  a.out: 
+  .github: 
+  .eslintrc: 
+extension:
+  go: 
+  hs: 
+  rs: 🦀
+  conf: 
+  tf: 
+  ts: 󰛦
+  yaml: 
+  yml: 
+  toml: 
+  sh: 
+  bash: 
+  fish: 󰈺
+filetype:
+  dir: 📂
+  file: 📄
+  pipe: 📩
+  socket: 󰆨
+  executable: 
+  symlink-dir: 
+  symlink-file: 
+  device-char: 
+  device-block: 󰜫
+  special: 

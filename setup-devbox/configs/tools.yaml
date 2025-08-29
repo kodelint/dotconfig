@@ -43,9 +43,9 @@ tools:
     options:
       - --head
 
-  # #########################
-  # Example: RUST Installer #
-  # #########################
+  # ###########################
+  # Example: RUSTUP Installer #
+  # ###########################
   # Install rust and other rust tools
   - name: rust
     # Specifies that 'rustup' should be used for installation
@@ -62,6 +62,13 @@ tools:
       - rustfmt
       ##  The language server for Rust, providing IDE features
       - rust-analyzer
+
+  # ##########################
+  # Example: CARGO Installer #
+  # ##########################
+  - name: lsd
+    source: cargo
+    version: 1.1.5
 
   # ###############################
   # Example: DIRECT URL Installer #
@@ -111,6 +118,13 @@ tools:
     tag: v0.4.0
     rename_to: tree
 
+  # Install morden exa aka morden `ls` command
+  - name: exa
+    version: 0.10.1
+    source: github
+    repo: ogham/exa
+    tag: v0.10.1
+
   # Install git-spellcheck
   - name: git-spellcheck
     version: 0.0.1
@@ -118,6 +132,14 @@ tools:
     repo: kodelint/git-spellcheck
     tag: v0.0.1
     rename_to: git-spellcheck
+
+  # Install git-spellcheck
+  - name: git-selective-ignore
+    version: 0.1.1
+    source: github
+    repo: kodelint/git-selective-ignore
+    tag: v0.1.1
+    rename_to: git-selective-ignore
 
   # Install native plugin for git pull request
   - name: git-pr
@@ -161,10 +183,10 @@ tools:
 
   # Install Zed Editor
   - name: zed
-    version: 0.195.5
+    version: 0.200.1-pre
     source: github
     repo: zed-industries/zed
-    tag: v0.195.5
+    tag: v0.200.1-pre
     rename_to: zed
 
   # Install Helix Editor for Comamnd Line
@@ -193,3 +215,25 @@ tools:
     repo: jqlang/jq
     tag: jq-1.8.1
     rename_to: jq
+
+  # Install wiper (macOS Cleaner)
+  - name: wiper
+    version: 0.1.1
+    source: github
+    repo: kodelint/wiper
+    tag: v0.1.1
+
+  # Install ollama (Local AI)
+  - name: ollama
+    version: 0.10.1
+    source: github
+    repo: ollama/ollama
+    tag: v0.10.1
+
+  # Install lazygit
+  - name: lazygit
+    version: 0.54.2
+    source: github
+    repo: jesseduffield/lazygit
+    tag: v0.54.2
+    rename_to: lg

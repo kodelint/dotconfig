@@ -14,12 +14,12 @@ macos-option-as-alt = "true"
 mouse-hide-while-typing = "true"
 unfocused-split-fill = "#000000"
 
-font-family = "0xProto Nerd Font Prop"
+font-family = "Hack Nerd Font Prop"
 font-feature = ss01
-font-size = 14.5
+font-size = 15
 adjust-cell-width = -5%
 adjust-cell-height = 2%
 adjust-cursor-height = 2%
 
 # Theme
-theme = Arthur
+theme = dimmedmonokai

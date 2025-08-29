@@ -1,4 +1,4 @@
-theme = "beans" # Popular dark theme, or use "default" for light
+theme = "sidra" # Popular dark theme, or use "default" for light
 
 [editor]
 line-number = "relative"
@@ -19,6 +19,10 @@ undercurl = true
 rulers = [80, 120]
 bufferline = "multiple"
 color-modes = true
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline
 
 [editor.statusline]
 left = [
@@ -87,14 +91,11 @@ smart-case = true
 wrap-around = true
 
 [editor.whitespace]
-render = "all"
-characters.space = "·"
-characters.nbsp = "⍽"
-characters.tab = "→"
+render = "none"
 
 [editor.indent-guides]
 render = true
-character = "│"
+character = "╎"
 skip-levels = 1
 
 [editor.gutters]

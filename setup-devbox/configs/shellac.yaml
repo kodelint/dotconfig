@@ -19,6 +19,7 @@ shellrc:
     - zle -N fzf-history-widget
     - bindkey '^R' fzf-history-widget
     - 'export FZF_CTRL_R_OPTS="--no-preview --scheme=history --tiebreak=index --bind=ctrl-r:toggle-sort"'
+    - source $HOME/.config/secrets.zsh
 aliases: # Custom command aliases for user convenience
   - name: cat # Replace `cat with `bat`
     value: bat --paging=never # The command it expands to: change directory to a common dev folder
@@ -26,8 +27,14 @@ aliases: # Custom command aliases for user convenience
     value: cd $HOME/Documents/github/kodelint/go-development/ # Change directory to the Go source workspace
   - name: rscode # Another alias for Rust Development
     value: cd $HOME/Documents/github/kodelint/rust-development
+  - name: blogs # Another alias for my blogs
+    value: cd $HOME/Documents/github/kodelint/blogs
+  - name: common # Another alias for Regular Development
+    value: cd $HOME/Documents/github/kodelint/common
   - name: config
     value: zed $HOME/.config
+  - name: ls
+    value: lsd --tree
   ## Git Aliases
   - name: g
     value: git

@@ -6,3 +6,4 @@ helix/runtime/*
 helix/contrib/*
 zed/prompts/prompts-library-db.0.mdb
 zed/prompts
+secrets.zsh
