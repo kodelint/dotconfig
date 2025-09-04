@@ -1,4 +1,4 @@
-theme = "sidra" # Popular dark theme, or use "default" for light
+theme = "monokai_pro" # Popular dark theme, or use "default" for light
 
 [editor]
 line-number = "relative"
